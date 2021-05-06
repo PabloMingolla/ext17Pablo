@@ -5,6 +5,8 @@
  */
 package mingolla;
 
+import java.util.Map;
+
 /**
  *
  * @author pablo
@@ -16,6 +18,10 @@ public class Programa {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        //prueba ej1
+        Map<String,String> mapa = LecturaCSV.leerCSV("nombresModulos.csv", "./");
+        System.out.println(mapa.toString());
     }
     
 }
