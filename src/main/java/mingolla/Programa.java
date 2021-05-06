@@ -5,6 +5,7 @@
  */
 package mingolla;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 /**
@@ -23,7 +24,8 @@ public class Programa {
         //Map<String,String> mapa = LecturaCSV.leerCSV("nombresModulos.csv", "");
         //System.out.println(mapa.toString());
         
-        
+        //prueba ej2
+        ArrayList<RegistroJSON> listaEj2 = LecturaJSON.leerFicheroJSON("calificacionesGrupo.json", "./");
     }
     
 }

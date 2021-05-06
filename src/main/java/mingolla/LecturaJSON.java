@@ -5,6 +5,9 @@
  */
 package mingolla;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -12,8 +15,15 @@ import java.util.ArrayList;
  * @author pablo
  */
 public class LecturaJSON {
-    public static ArrayList<RegistroJSON> leerFicheroJSON(String nombre, String ruta){
+
+    public static ArrayList<RegistroJSON> leerFicheroJSON(String nombre, String ruta) {
         ArrayList<RegistroJSON> lista = new ArrayList<>();
-        
+        try {
+            ObjectMapper mapeador = new ObjectMapper();
+            lista = mapeador.readValue(new File(ruta+nombre), mapeador.getTypeFactory().constructCollectionLikeType(ArrayList.class, RegistroJSON.class));
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
     }
 }

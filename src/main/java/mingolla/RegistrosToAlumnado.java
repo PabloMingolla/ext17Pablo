@@ -10,5 +10,5 @@ package mingolla;
  * @author pablo
  */
 public class RegistrosToAlumnado {
-    public static 
+    //public static 
 }
