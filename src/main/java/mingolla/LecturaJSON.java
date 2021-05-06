@@ -16,6 +16,7 @@ import java.util.ArrayList;
  */
 public class LecturaJSON {
 
+    //lectura del Fichero JSON a través del mapper
     public static ArrayList<RegistroJSON> leerFicheroJSON(String nombre, String ruta) {
         ArrayList<RegistroJSON> lista = new ArrayList<>();
         try {

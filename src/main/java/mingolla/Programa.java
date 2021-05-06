@@ -21,8 +21,8 @@ public class Programa {
         // TODO code application logic here
         
         //prueba ej1
-        //Map<String,String> mapa = LecturaCSV.leerCSV("nombresModulos.csv", "");
-        //System.out.println(mapa.toString());
+        Map<String,String> mapa = LecturaCSV.leerCSV("nombresModulos.csv", "./");
+        System.out.println(mapa.toString());
         
         //prueba ej2
         ArrayList<RegistroJSON> listaEj2 = LecturaJSON.leerFicheroJSON("calificacionesGrupo.json", "./");
@@ -35,6 +35,15 @@ public class Programa {
         for (Alumnado alumnado : listaEj3) {
             System.out.println(alumnado.toString());
         }
+        
+        //prueba ej4
+        Alumnado a = new Alumnado();
+        for (Alumnado alumnado : listaEj3) {
+            if(alumnado.getNombre().contains("Delia")){
+                a = alumnado;
+            }
+        }
+        AlumnadoToTSV.crearAlumnoToTSV(a, mapa);
     }
     
 }

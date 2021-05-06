@@ -12,6 +12,7 @@ import java.util.Objects;
  *
  * @author pablo
  */
+//Clase POJO con Comparable
 public class Alumnado implements Comparable<Alumnado>{
     private String nombre;
     private Map<String,String> calificaciones;

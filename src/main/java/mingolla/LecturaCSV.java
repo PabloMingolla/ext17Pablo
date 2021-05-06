@@ -21,8 +21,10 @@ public class LecturaCSV {
         String linea;
         String[] tokens;
         try(Scanner sc = new Scanner(new File(ruta+nombre), "UTF-8")){
+            //esta linea hace que pete el codigo, y sin ella no lee bien el CSV
+            //lo que porvoca que escriba el TSV vacío y con algun error de formato
             sc.nextLine();
-            while(sc.hasNext()){
+            while(sc.hasNextLine()){
                 linea=sc.nextLine();
                 tokens=linea.split(";");
                 mapa.put(tokens[0], tokens[1]);

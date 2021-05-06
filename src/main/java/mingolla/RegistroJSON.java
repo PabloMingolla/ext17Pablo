@@ -12,6 +12,7 @@ import java.util.Objects;
  *
  * @author pablo
  */
+//Clase POJO
 public class RegistroJSON {
     @JsonProperty("Alumno/a") 
     private String alumnoA;
