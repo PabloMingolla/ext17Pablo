@@ -20,8 +20,10 @@ public class Programa {
         // TODO code application logic here
         
         //prueba ej1
-        Map<String,String> mapa = LecturaCSV.leerCSV("nombresModulos.csv", "./");
-        System.out.println(mapa.toString());
+        //Map<String,String> mapa = LecturaCSV.leerCSV("nombresModulos.csv", "");
+        //System.out.println(mapa.toString());
+        
+        
     }
     
 }
