@@ -26,7 +26,15 @@ public class Programa {
         
         //prueba ej2
         ArrayList<RegistroJSON> listaEj2 = LecturaJSON.leerFicheroJSON("calificacionesGrupo.json", "./");
+        for (RegistroJSON registro : listaEj2) {
+            System.out.println(registro.toString());
+        }
         
+        //prueba ej3
+        ArrayList<Alumnado> listaEj3 = RegistrosToAlumnado.listarAlumnos(listaEj2);
+        for (Alumnado alumnado : listaEj3) {
+            System.out.println(alumnado.toString());
+        }
     }
     
 }

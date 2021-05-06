@@ -6,6 +6,8 @@
 package mingolla;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -13,11 +15,21 @@ import java.util.ArrayList;
  */
 public class RegistrosToAlumnado{
     public static ArrayList<Alumnado> listarAlumnos(ArrayList<RegistroJSON> listaRegistros){
+        ArrayList<Alumnado> listaAlumnos = new ArrayList<>();
         for (RegistroJSON registro : listaRegistros) {
-            
+            listaAlumnos.add(new Alumnado(registro.getAlumnoA(),crearMapa(registro)));
         }
+        return listaAlumnos;
     }
-
-    
-    
+    private static Map<String,String> crearMapa(RegistroJSON r){
+        Map<String,String> salida = new HashMap<>();
+        salida.put("OACV", r.getoACV());
+        salida.put("EA", r.geteA());
+        salida.put("TII", r.gettII());
+        salida.put("TC", r.gettC());
+        salida.put("ING", r.getiNG());
+        salida.put("FOL", r.getfOL());
+        salida.put("CEAC", r.getcEAC());
+        return salida;
+    }
 }
