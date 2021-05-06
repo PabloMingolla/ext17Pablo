@@ -26,6 +26,7 @@ public class Programa {
         
         //prueba ej2
         ArrayList<RegistroJSON> listaEj2 = LecturaJSON.leerFicheroJSON("calificacionesGrupo.json", "./");
+        
     }
     
 }

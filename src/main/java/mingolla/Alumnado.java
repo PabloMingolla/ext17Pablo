@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author pablo
  */
-public class Alumnado {
+public class Alumnado implements Comparable<Alumnado>{
     private String nombre;
     private Map<String,String> calificaciones;
 
@@ -80,6 +80,12 @@ public class Alumnado {
             salida += entry.getKey() + ":";
             salida += entry.getValue() + " ";
         }
+        return salida;
+    }
+
+    @Override
+    public int compareTo(Alumnado al) {
+        int salida = this.nombre.compareTo(al.getNombre());
         return salida;
     }
 }

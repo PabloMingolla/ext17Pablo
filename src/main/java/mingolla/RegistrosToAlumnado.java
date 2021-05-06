@@ -5,10 +5,19 @@
  */
 package mingolla;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author pablo
  */
-public class RegistrosToAlumnado {
-    //public static 
+public class RegistrosToAlumnado{
+    public static ArrayList<Alumnado> listarAlumnos(ArrayList<RegistroJSON> listaRegistros){
+        for (RegistroJSON registro : listaRegistros) {
+            
+        }
+    }
+
+    
+    
 }
